@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: docker-fastapi-backend
+    image: docker-fastapi-backend-image
+    build:
+      context: ./backend
+    ports:
+     - 8000:8000
+  frontend:
+    container_name: docker-react-frontend
+    image: docker-react-frontend-image
+    build:
+      context: ./frontend
+    ports:
+     - 8080:8080
